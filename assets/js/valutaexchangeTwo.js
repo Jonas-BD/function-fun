@@ -38,9 +38,20 @@ function showResult(myEuroResult, myDollarResult, myDanishAmount) {
 
 }
 
-/* skriv din kode herunder.
+/* skriv din kode herunder. */
+function calculateExchange(danishAmount, exchangeRate) {
+    return (danishAmount * exchangeRate).toFixed(2);
+}
 
+function makeExchange(euroRate, dollarRate, danishAmount) {
+    const euroAmount = calculateExchange(danishAmount, euroRate);
+    console.log(euroAmount);
 
+    const dollarAmount = calculateExchange(danishAmount, dollarRate);
+    console.log(dollarAmount);
+
+    showResult(euroAmount, dollarAmount, danishAmount);
+}
 
 
 
